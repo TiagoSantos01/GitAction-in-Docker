@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  gitaction:
+    container_name: gitaction
+    build:
+      context: .
+      args:
+        - GITHUB_URL=
+        - GITHUB_TOKEN=
+        - GITHUB_LABEL=
+    restart: always
+    mem_limit: 1gb
+    cpus: 0.5
+    runtime: sysbox-runc
+    hostname: syscont
+    tty: true
+    stdin_open: true

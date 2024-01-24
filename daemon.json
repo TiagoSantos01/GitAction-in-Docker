@@ -1,0 +1,14 @@
+{
+    "runtimes": {
+        "sysbox-runc": {
+            "path": "/usr/bin/sysbox-runc"
+        }
+    },
+    "default-runtime": "sysbox-runc",
+    "default-address-pools": [
+        {
+            "base": "172.25.0.0/16",
+            "size": 24
+        }
+    ]
+}
