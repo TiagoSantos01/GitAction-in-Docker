@@ -2,7 +2,8 @@
 
 FROM nestybox/ubuntu-focal-systemd-docker:latest
 
-RUN apt-get update && apt-get install -y xvfb
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 WORKDIR /actions-runner
 
 RUN sudo useradd -ms /bin/bash runner
